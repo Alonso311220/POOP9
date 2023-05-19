@@ -1,0 +1,43 @@
+@startuml
+scale 3
+class Animal{
+    -nombre: String
+    -lugarOrigen: String
+    -color: String
+}
+
+class AnimalAcuatico{
+    -numAletas: int
+    +nadar()
+    +comer()
+}
+AnimalAcuatico <|-- Animal: extends
+class AnimalTerrestre{
+    -numPatas: int
+    +correr()
+    +comer()
+}
+AnimalTerrestre <|-- Animal: extends
+class AnimalAereo{
+    -numAlas: int
+    +volar()
+    +comer()
+}
+AnimalAereo <|-- Animal: extends
+class Ballena{
+    -largo: int
+    +pelearConPinocho()
+}
+Ballena <|-- AnimalAcuatico: extends
+class Perro{
+    -coloCollar: String
+    +hacerTrucos(): void
+}
+Perro <|-- AnimalTerrestre: extends
+class Pajaro{
+    -tipoPico: String
+    +recolectarRamas()
+}
+Pajaro <|-- AnimalAereo: extends
+
+@enduml

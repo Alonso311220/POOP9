@@ -1,0 +1,28 @@
+@startuml
+scale 3
+class AplicationUser{
+    -userName: String
+    -password: String
+    +islocked: boolean
+    -suggestRandomPassword()
+    +changeProfilePic()
+}
+
+abstract class Event{
+    +startTime: DateTime
+    +venue: String
+    +registrationClosed: boolean
+    -notifyAttendes()
+}
+
+interface Hola{
+    +perro: int
+    -gato: float
+    +pericoMuerde()
+}
+
+class Saludar{
+    +buenDia: String
+}
+Hola <|-- Saludar: implements 
+@enduml
